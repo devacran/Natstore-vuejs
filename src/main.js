@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import App from "./App.vue";
+import router from "./router";
 import { setWishItem } from "./actions";
 import { initialState } from "./initialState";
 Vue.use(Vuex);
@@ -14,10 +15,8 @@ const store = new Vuex.Store({
 
 new Vue({
   store,
-  data() {
-    return { path: window.location.pathname };
-  },
+  router,
   render(h) {
-    return h(App, { props: { path: this.path } });
+    return h(App);
   }
 }).$mount("#app");

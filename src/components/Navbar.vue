@@ -13,7 +13,12 @@ export default {
   components: { SearchBox },
   data: () => ({
     menuLinks
-  })
+  }),
+  computed: {
+    myWishList() {
+      return this.$store.state.myWishList;
+    }
+  }
 };
 </script>
 <template>
@@ -32,10 +37,10 @@ export default {
             <span> </span>
           </div>
           <div class="wish-button">
-            <a href="/wishlist">
+            <router-link to="/wishlist">
               <img src="../assets/WishIconInactive.png" />
-            </a>
-            <!-- <span>{myWishList.length}</span> -->
+            </router-link>
+            <span>{{ myWishList.length }}</span>
           </div>
         </div>
       </div>

@@ -1,28 +1,26 @@
 <script>
 import Layout from "../components/Layout.vue";
+import pxMenu from "../components/pxMenu.vue";
 import WishList from "../components/WishList.vue";
 
 export default {
   name: "Home",
   components: {
     Layout,
-    WishList
+    WishList,
+    pxMenu
   }
 };
 </script>
 <template>
   <Layout>
     <div class="container">
-      <div class="menu" />
+      <pxMenu />
       <WishList />
     </div>
   </Layout>
 </template>
 <style scoped lang="scss">
-.menu {
-  width: 100%;
-  background-color: #cbcbcb;
-}
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;

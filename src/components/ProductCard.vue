@@ -9,7 +9,6 @@ export default {
   },
   computed: {
     isFav() {
-      console.log(this.product.isFavorite);
       return this.product.isFavorite;
     },
     containerClass() {

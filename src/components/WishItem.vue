@@ -6,14 +6,14 @@ export default {
   props: ["product"],
   methods: {
     handleClick() {
-      console.log("click");
+      this.$store.commit("setWishItem", this.product);
     }
   }
 };
 </script>
 <template lang="html">
   <div class="container">
-    <ProductCard />
+    <ProductCard styleType="wish" :product="product" />
     <div class="description">
       <div class="title">
         {{ product.name }}
@@ -49,5 +49,6 @@ export default {
   right: 10px;
   width: 200px;
   height: 30px;
+  cursor: pointer;
 }
 </style>

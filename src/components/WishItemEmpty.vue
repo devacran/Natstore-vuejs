@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="container">
-    Aun no has añadido nada a tu lista <br />
-    IR A COMPRAR
+    Aun no has añadido nada a tu lista
+
+    <router-link to="/">IR A COMPRAR</router-link>
   </div>
 </template>
 

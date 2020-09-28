@@ -21,7 +21,6 @@ export default {
       <div class="grid">
         <ProductCard
           :product="product"
-          :pancho="{ perro: 'hola' }"
           v-for="(product, i) in productList"
           :key="i"
         />

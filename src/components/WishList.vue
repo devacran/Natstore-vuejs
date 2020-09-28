@@ -7,10 +7,10 @@ export default {
     WishItem,
     WishItemEmpty
   },
-  data() {
-    return {
-      myWishList: this.$store.state.myWishList
-    };
+  computed: {
+    myWishList() {
+      return this.$store.state.myWishList;
+    }
   }
 };
 </script>
